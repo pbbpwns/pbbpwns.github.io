@@ -363,19 +363,6 @@ $("#sensen").click(function() {
 });
 });
 
-//TOGGLE BACKGROUND
-$("#pbb").mouseenter(function(){
-    $("#pbb").css("border", "solid 2px white");
-        $("body").each(function(){
-    		var classes = ['bg1','bg2', 'bg3', 'bg4', 'bg5', 'bg6', 'bg7', 'bg8', 'bg9', 'bg10', 'bg11', 'bg12', 'body'];
-    		this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
-  		});
-	});
-
-    $("#pbb").mouseleave(function(){
-        $("#pbb").css("border", "none");
-    });
-
 //PRELOAD IMAGES
 $(function() {
     $.preload([
