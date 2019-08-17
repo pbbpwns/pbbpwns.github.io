@@ -568,12 +568,34 @@ background: rgba(0,0,0, 0.1);
 	font-family: Calibri;
 }
 
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+label { 
+  -webkit-appearance: push-button;
+  -moz-appearance: button; 
+  display: inline-block;
+  margin: 60px 0 10px 0;
+  cursor: pointer;
+}
+	
+/* Toggled State */
+input[type=checkbox]:checked ~ volt {
+   display: none;
+}
+	
 </style>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 
+<label for="toggle-1">I'm a toggle</label>
+<input type="checkbox" id="toggle-1">
+<div>I'm controlled by toggle. No JavaScript!</div>
+	
 <div class="hidden">
 <script type="text/javascript">
 	<!--//--><![CDATA[//><!--
