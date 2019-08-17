@@ -604,7 +604,7 @@ $("#pbb").mouseenter(function(){
 
 //TOGGLE RAIN BACKGROUND
 $("#raintitle").mouseenter(function(){
-    $("#raintitle").css("border", "solid 2px white");
+    $("#raintitle").css("border", "none");
         $("body").each(function(){
     		var classes = ['rain1', 'rain2', 'rain3', 'rain4', 'body'];
     		this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
