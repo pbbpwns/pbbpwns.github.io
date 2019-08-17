@@ -357,6 +357,7 @@ background: rgba(0,0,0, 0.1);
 <div class="submenu"><div id="acnl">ACNL</div></div>
 <div class="submenu"><div id="acww">ACWW</div></div>
 <div class="submenu"><div id="accf">ACCF</div></div>
+<div class="submenu"><div id="study">Study</div></div>
 </div>
 </div>
 </div>
@@ -375,9 +376,7 @@ background: rgba(0,0,0, 0.1);
 <iframe width="0" height="0" src="http://www.endlessvideo.com/watch?v=HMnrl0tmd3k" width="0" height="0" style="left: -10px; top: -10px; position: absolute; visibility: hidden;"></iframe>
 !-->
 
-<iframe id="ytplayer" type="text/html" width="640" height="390"
-  src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=1&loop=1"
-  frameborder="0"></iframe>
+
 	
 <!--<audio src="/Turnabout%20Jazz%20Soul%20-%20Track%208%20-%20Godot%20-%20The%20Fragrance%20of%20Dark%20Coffee%20(1).mp3" autoplay loop>
 <p>If you are reading this, it is because your browser does not support the audio element.     </p>
@@ -433,6 +432,11 @@ background: rgba(0,0,0, 0.1);
 <!--ACCF-->
 <div id="accfshow" class="hidden" style="left: 500px; top: 130px; position: absolute;">
 <iframe width="450" height="350" src="https://www.youtube.com/embed/9GavnF2SuOc" frameborder="1" allowfullscreen></iframe>
+</div>
+
+<!--Study Music-->
+<div id="study2" class="hidden" style="left: 500px; top: 130px; position: absolute;">
+<iframe id="ytplayer" type="text/html" width="450" height="350" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=1&loop=1" frameborder="1" allowfullscreen></iframe>
 </div>
 
 <!--RainyMood-->
@@ -502,6 +506,12 @@ $( "#accf" ).click(function() {
     // Animation complete.
   });
 });
+
+$( "#study").click(function() {
+	$( "#study2").slideToggle( "slow", function() {
+});
+});
+
 
 $( "#rain").click(function() {
 	$( "#rain2").slideToggle( "slow", function() {
