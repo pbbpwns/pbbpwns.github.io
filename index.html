@@ -197,6 +197,50 @@ body {
    -webkit-transition: background .25s ease;
 }
 	
+	.rain1{
+	background-image: url(https://media.giphy.com/media/t7Qb8655Z1VfBGr5XB/giphy.gif);
+	background-size:100% 100vh;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+    opacity: 1;
+    transition: background .25s ease;
+    -moz-transition: background .25s ease;
+    -webkit-transition: background .25s ease;
+}
+
+	.rain2{
+	background-image: url(https://media.giphy.com/media/9aTPMXosZmHWE/giphy.gif);
+	background-size:100% 100vh;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+    opacity: 1;
+    transition: background .25s ease;
+    -moz-transition: background .25s ease;
+    -webkit-transition: background .25s ease;
+}
+
+	.rain3{
+	background-image: url(https://media2.giphy.com/media/GzL2AirFYaRpe/giphy.gif?cid=790b76118c5a5caae4f6eb5587556426d739a87bb3374067&rid=giphy.gif);
+	background-size:100% 100vh;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+    opacity: 1;
+    transition: background .25s ease;
+    -moz-transition: background .25s ease;
+    -webkit-transition: background .25s ease;
+}
+
+	.rain4{
+	background-image: url(https://media.giphy.com/media/BMu2SwuXflOlQP8jTC/giphy.gif);
+	background-size:100% 100vh;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+    opacity: 1;
+    transition: background .25s ease;
+    -moz-transition: background .25s ease;
+    -webkit-transition: background .25s ease;
+}
+
 .h1 {
 font-family: Calibri Light;
 font-size: 10pt;
@@ -251,6 +295,22 @@ color: white;
 text-align: center;
 // text-shadow: 0 0 35px #FFFF33;
 text-shadow: 0 0 15px #FFFF33;
+// -webkit-text-stroke: 4px black;
+border: 2px solid white;
+border-radius: 10%;
+height: 80px;
+width: 150px;
+background: rgba(0,0,0, 0.1);
+}
+
+.volt-rain {
+font-family: Century Gothic;
+font-size: 20pt;
+color: white;
+// line-height: 150px;
+text-align: center;
+// text-shadow: 0 0 35px #FFFF33;
+text-shadow: 0 0 15px #70e0ff;
 // -webkit-text-stroke: 4px black;
 border: 2px solid white;
 border-radius: 10%;
@@ -370,6 +430,8 @@ background: rgba(0,0,0, 0.1);
 
 
 <div class="volt" id="pbb" style="left: 650px; top: 20px; position: absolute;">Pbb</div>
+
+<div class="volt-rain" id="raintitle" style="left: 20px; top: 20px; position: absolute;">Rain Toggler</div>
 	
 <!--
 <iframe width="0" height="0" src="http://www.endlessvideo.com/watch?v=DIx3aMRDUL4" width="0" height="0" style="left: -10px; top: -10px; position: absolute; visibility: hidden;"></iframe>
@@ -540,7 +602,18 @@ $("#pbb").mouseenter(function(){
         $("#pbb").css("border", "none");
     });
 
+//TOGGLE RAIN BACKGROUND
+$("#raintitle").mouseenter(function(){
+    $("#raintitle").css("border", "solid 2px white");
+        $("body").each(function(){
+    		var classes = ['rain1', 'rain2', 'rain3', 'rain4', 'body'];
+    		this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+  		});
+	});
 
+    $("#raintitle").mouseleave(function(){
+        $("#raintitle").css("border", "none");
+    });
 	
 </script>
 
