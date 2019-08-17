@@ -583,7 +583,15 @@ label {
 	
 /* Toggled State */
 input[type=checkbox]:checked ~ .volt {
-   display: none;
+     opacity: 0;
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    -webkit-transition: opacity 2s ease-out;
+    -moz-transition: opacity 2s ease-out;
+    -o-transition: opacity 2s ease-out;
+    -ms-transition: opacity 2s ease-out;
+    transition: opacity 2s ease-out;
 }
 	
 </style>
