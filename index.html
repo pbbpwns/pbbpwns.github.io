@@ -542,7 +542,8 @@ background: rgba(0,0,0, 0.1);
 	color: white;
 	background: rgba(0,0,0, 0.3);
 	text-align: center;
-	width: 150px;
+	width:;
+	max-height: 50px;
 	transition: background-color 1.2s;
 }
 
@@ -726,7 +727,43 @@ button:hover {
 
 <div class="volt-rain" id="raintitle" style="left: 35px; top: 30px; position: absolute;">Rain Toggler</div>
 
-<a href="#"><div class="btext" style="left: 650px; top: 600px; position: absolute;">FOCUS <br> 할수있어!! <br> Never give up.</div></a>
+<!--<a href="#"><div class="btext" style="left: 650px; top: 600px; position: absolute;">FOCUS <br> 할수있어!! <br> Never give up.</div></a>-->
+<div class="btext" style="left: 650px; top: 600px; position: absolute;">
+<script>
+function ShowQuote()
+  {
+    var Quote = [
+    	'Push yourself because no one else is going to do it for you.',
+    	'If you never try, then you&#39;ll never know.',
+    	'If you want extraordinary results, then you must put in extraordinary effort.',
+    	'Don&#39;t tell peopl about your plans, show them your results.',
+    	'There are no secrets to success. It is the result of preparation, hard work, and learning from failure.',
+    	'A little progress each day adds up to big results.',
+    	'Consistent action creates consistent results.',
+    	'Results come over time, not over night.',
+    	'Today&#39;s actions are tomorrow&#39;s results.',
+    	'Pain is temporary, GPA is forever.',
+    	'You need to give it all you&39;ve got in order to accelerate your results.',
+    	'Persistence guarantees that results are inevitable.',
+    	'The best way to get results is not to have excuses.',
+    	'The results you achieve will be in direct proportion to the effort you apply.',
+    	'Study while others are sleeping and you&#39;ll celebrate while others will regret.',
+    	'Shoot for the moon because even if you miss, you&#39;ll land among the stars.',
+    	'Everything you do now is for your future. Think about that.',
+    	'If you want to more powerful in life, educate yourself. It&#39;s that simple.',
+    	'You don&#39;t want to look back and know you could&#39;ve done better.',
+    	'The fact that you aren&#39;t where you want to be, should be enough motivation.',
+    	'Focus on studying. I know it&#39;s hard, but believe me, it&#39;s going to be worth it.',
+    	'To be in the top 1%, you have to be willing to do what the other 99% aren&#39;t.',
+    	'The expert in anything was once a beginner.',
+    ];
+    var Pick = Math.floor(Math.random() * (Quote.length));
+    document.write(Quote[Pick]);
+  }
+  
+  document.addEventListener("load", ShowQuote());
+ </script>
+</div>
 
 <div style="left: 30px; top: 100px; position: absolute; hidden="true">
 <iframe width="0" height="0" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=1&loop=1" frameborder="1" allowfullscreen></iframe>
