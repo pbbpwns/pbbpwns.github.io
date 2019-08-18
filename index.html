@@ -511,10 +511,10 @@ text-align: center;
 // text-shadow: 0 0 35px #FFFF33;
 text-shadow: 0 0 15px #70e0ff;
 // -webkit-text-stroke: 4px black;
-border: 2px solid white;
+//border: 2px solid white;
 border-radius: 10%;
-height: 30px;
-width: 130px;
+height: 20px;
+width: 120px;
 background: rgba(0,0,0, 0.1);
 }
 
@@ -568,6 +568,10 @@ background: rgba(0,0,0, 0.1);
 	font-family: Calibri;
 }
 
+.fade {
+}
+
+/* Checkbox to hide everything */
 input[type=checkbox] {
    position: absolute;
    top: 50px;
@@ -582,16 +586,64 @@ label {
 }
 	
 /* Toggled State */
-input[type=checkbox]:checked ~ .volt {
+//input[type=checkbox]:checked ~ .volt-rain {
      opacity: 0;
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
-    -webkit-transition: opacity 2s ease-out;
-    -moz-transition: opacity 2s ease-out;
-    -o-transition: opacity 2s ease-out;
-    -ms-transition: opacity 2s ease-out;
-    transition: opacity 2s ease-out;
+    -webkit-transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    -ms-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+}
+
+/* Toggled State */
+//input[type=checkbox]:checked ~ .volt {
+     opacity: 0;
+    -webkit-transition: opacity 1s ease-out;
+    -moz-transition: opacity 1s ease-out;
+    -o-transition: opacity 1s ease-out;
+    -ms-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+}
+
+.fadeButton{
+	background: #ededed;
+	height: 100%;
+	width: 100%;
+	opacity: 0.2;
+	border: 1px solid #000000;
+	font-family: Calibri Light;
+	border-radius: 5px;
+}
+
+.fade{
+    
+}
+
+.fadeout {
+    animation: fadeOut 2s linear forwards;
+}
+
+@keyframes fadeOut {
+ 0% { opacity:1; }
+ 50% { opacity:0; } 
+ 100% { opacity:0; } 
+}
+
+
+button span {
+  max-width: 0;
+  -webkit-transition: max-width 1s;
+  transition: max-width 1s;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+}
+button:hover span {
+  max-width: 7rem;
+}
+button:hover {
+	opacity: 1;
 }
 	
 </style>
@@ -600,9 +652,9 @@ input[type=checkbox]:checked ~ .volt {
 </head>
 <body>
 
-<label for="toggle-1">I'm a toggle</label>
-<input type="checkbox" id="toggle-1">
-<div>I'm controlled by toggle. No JavaScript!</div>
+<!--<input type="checkbox" id="toggle-1">-->
+
+
 	
 <div class="hidden">
 <script type="text/javascript">
@@ -636,7 +688,25 @@ input[type=checkbox]:checked ~ .volt {
 	</script>
 </div>
 
+
+
+<!-- Pbb logo.gif
+<div style ="left: 415px; top: -180px; position: absolute;">
+<img src="http://i.imgur.com/HrLK72Z.gif";>
+</div>
+-->
+
+<div style="left:0px; top: 0px; position: absolute">
+<button class="fadeButton" id="btn">
+	<font style='color: #ff299b'>♥</font>
+	<span>Show/Hide</span>
+</button>
+</div>
+
+<div class="fade">
+
 <div style="left: 0px; top: 80px; position: absolute">
+
 <div class="menu"><div id="clickmenu"><i class="fa fa-bars"></i> MENU</div></div>
 </div>
 
@@ -651,17 +721,33 @@ input[type=checkbox]:checked ~ .volt {
 </div>
 </div>
 
-<!-- Pbb logo.gif
-<div style ="left: 415px; top: -180px; position: absolute;">
-<img src="http://i.imgur.com/HrLK72Z.gif";>
-</div>
--->
-
-
 <div class="volt" id="pbb" style="left: 650px; top: 20px; position: absolute;">Pbb</div>
 
-<div class="volt-rain" id="raintitle" style="left: 20px; top: 20px; position: absolute;">Rain Toggler</div>
-	
+
+<div class="volt-rain" id="raintitle" style="left: 35px; top: 30px; position: absolute;">Rain Toggler</div>
+
+<a href="#"><div class="btext" style="left: 650px; top: 600px; position: absolute;">FOCUS <br> 할수있어!! <br> Never give up.</div></a>
+
+<div style="left: 30px; top: 100px; position: absolute; hidden="true">
+<iframe width="0" height="0" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=1&loop=1" frameborder="1" allowfullscreen></iframe>
+</div>
+</div>
+
+<script>
+var div = document.querySelector(".fade");
+var btn = document.querySelector(".fadeButton");
+btn.addEventListener("click", function(){
+  //if(div.classList.contains("volt")){
+  //div.classList.remove("fadeout");
+  //else
+  div.classList.toggle("fadeout");
+  //};
+  // Wait until the animation is over and then remove the class, so that
+  // the next click can re-add it.
+  // setTimeout(function(){div.classList.remove("fadeout");}, 2000);
+});
+</script>
+
 <!--
 <iframe width="0" height="0" src="http://www.endlessvideo.com/watch?v=DIx3aMRDUL4" width="0" height="0" style="left: -10px; top: -10px; position: absolute; visibility: hidden;"></iframe>
 <iframe width="0" height="0" src="http://www.endlessvideo.com/watch?v=HMnrl0tmd3k" width="0" height="0" style="left: -10px; top: -10px; position: absolute; visibility: hidden;"></iframe>
@@ -685,9 +771,7 @@ input[type=checkbox]:checked ~ .volt {
 </audio>
 
 
-<div style="left: 30px; top: 100px; position: absolute; hidden="true">
-<iframe width="0" height="0" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=1&loop=1" frameborder="1" allowfullscreen></iframe>
-</div>
+
 
 
 <!--<div class="volt" style="left: 650px; top: 20px; position: absolute;">Pbb</div>!-->
@@ -695,7 +779,7 @@ input[type=checkbox]:checked ~ .volt {
 <!--
 <a href="#"><div class="btext" style="left: 650px; top: 500px; position: absolute;">DOWNLOAD</div></a>
 !-->
-<a href="#"><div class="btext" style="left: 650px; top: 600px; position: absolute;">FOCUS <br> 할수있어!! <br> Never give up.</div></a>
+
 
 <!--
 <div class ="icon" style="left: 630px; top: 550px; position: absolute;">
