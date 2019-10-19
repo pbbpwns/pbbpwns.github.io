@@ -718,6 +718,7 @@ button:hover {
 <div class="submenu"><div id="acww">ACWW</div></div>
 <div class="submenu"><div id="accf">ACCF</div></div>
 <div class="submenu"><div id="study">Study</div></div>
+<div class="submenu"><div id="counter">Stats</div></div>
 </div>
 </div>
 </div>
@@ -860,6 +861,11 @@ btn.addEventListener("click", function(){
 <iframe id="ytplayer" type="text/html" width="450" height="350" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=0&loop=1" frameborder="1" allowfullscreen></iframe>
 </div>
 
+<!--Counter-->
+<div id="counter2" class="hidden" style="left: 500px; top: 130px; position: absolute;">
+<a href="https://info.flagcounter.com/XOT9"><img src="https://s05.flagcounter.com/count/XOT9/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
+</div
+
 <!--RainyMood--><!--
 <div id="rain" class="rainblock" style="left: 1300px; top: 10px; position: absolute;">Let<br> It<br> Rain</div>
 <div id="rain2" style="left: 500px; top: 110px; position: absolute; display: none;">
@@ -933,6 +939,10 @@ $( "#study").click(function() {
 });
 });
 
+$( "#counter").click(function() {
+	$( "#counter2").slideToggle( "slow", function() {
+});
+});
 
 $( "#rain").click(function() {
 	$( "#rain2").slideToggle( "slow", function() {
