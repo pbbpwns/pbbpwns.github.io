@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="shortcut icon" href="http://www.iconj.com/ico/e/g/eg7ibcvsmx.ico" type="image/x-icon" />
+<title>Pbb</title>
+<style type="text/css">
+
+body {
+  	background-image: linear-gradient(#FC0474, #FFE9F8);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+        width: 100%;
+	//display: block;
+   transition: background .25s ease;
+   -moz-transition: background .25s ease;
+   -webkit-transition: background .25s ease;
+}
+
+.volt {
+font-family: Century Gothic;
+font-size: 50pt;
+color: white;
+// line-height: 150px;
+text-align: center;
+// text-shadow: 0 0 35px #FFFF33;
+text-shadow: 0 0 15px #FFFF33;
+// -webkit-text-stroke: 4px black;
+border: 2px solid white;
+border-radius: 0%;
+height: 80px;
+width: 550px;
+background: rgba(0,0,0, 0.1);
+}
+
+.heading {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
+.btext {
+font-family: Calibri;
+font-size: 50pt;
+color: black;
+line-height: 30px;
+max-width: 800px;
+text-align: left;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #0FE398;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+  
+  </style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="volt" id="pbb" style="left: 400px; top: 20px; position: absolute;">TFT Checklist</div>
+
+
+<div class="btext" style="left: 100px; top: 150px; position: absolute;">
+  <div class="heading">Knights (2)<br><br></div>
+<label class="container">Poppy
+  <!--<input type="checkbox" checked="checked">-->
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Mordekaiser
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Garen
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Darius
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div class="btext" style="left: 400px; top: 150px; position: absolute;">
+  <div class="heading">Yordles (3)<br><br></div>
+<label class="container">Poppy
+  <!--<input type="checkbox" checked="checked">-->
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Veigar
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Lulu
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Tristana
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Kennen
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div class="btext" style="left: 670px; top: 150px; position: absolute;">
+  <div class="heading">Sorcerers (3)<br><br></div>
+<label class="container">Morgana
+  <!--<input type="checkbox" checked="checked">-->
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Veigar
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Lulu
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Kassadin
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Karthus
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div class="btext" style="left: 920px; top: 150px; position: absolute;">
+  <div class="heading">Ranger (2)<br><br></div>
+<label class="container">Varus
+  <!--<input type="checkbox" checked="checked">-->
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Kindred
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div class="btext" style="left: 100px; top: 450px; position: absolute;">
+  <div class="heading">Phantom (2)<br><br></div>
+<label class="container">Mordekaiser
+  <!--<input type="checkbox" checked="checked">-->
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Kindred
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Karthus
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div class="btext" style="left: 400px; top: 450px; position: absolute;">
+  <div class="heading">Demons (2)<br><br></div>
+
+<label class="container">Morgana
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Varus
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">Brand
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+
+  
+</body>
+</html>
