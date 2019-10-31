@@ -43,6 +43,60 @@ background: rgba(0,0,0, 0.1);
   max-width: 100%;
 }
 
+.knight {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
+.yordle {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
+.sorc {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
+.demon {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
+.ranger {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
+.phantom {
+  font-family: Calibri;
+  font-style: u;
+  font-size: 30pt;
+  color: black;
+  line-height: 30px;
+  max-width: 100%;
+}
+
 .btext {
 font-family: Calibri;
 font-size: 50pt;
@@ -130,7 +184,7 @@ text-align: left;
 
 
 <div class="btext" style="left: 100px; top: 150px; position: absolute;">
-  <div class="heading">Knights (2)<br><br></div>
+  <div class="knight">Knights (2)<br><br></div>
 <label class="container">Poppy
   <!--<input type="checkbox" checked="checked">-->
   <input type="checkbox" class="poppy">
@@ -155,7 +209,7 @@ text-align: left;
 </div>
 
 <div class="btext" style="left: 400px; top: 150px; position: absolute;">
-  <div class="heading">Yordles (3)<br><br></div>
+  <div class="yordle">Yordles (3)<br><br></div>
 <label class="container">Poppy
   <!--<input type="checkbox" checked="checked">-->
   <input type="checkbox" id="parentpoppy">
@@ -184,7 +238,7 @@ text-align: left;
 </div>
 
 <div class="btext" style="left: 670px; top: 150px; position: absolute;">
-  <div class="heading">Sorcerers (3)<br><br></div>
+  <div class="sorc">Sorcerers (3)<br><br></div>
 <label class="container">Morgana
   <!--<input type="checkbox" checked="checked">-->
   <input type="checkbox" id="parentmorgana">
@@ -207,13 +261,13 @@ text-align: left;
 </label>
 
 <label class="container">Karthus
-  <input type="checkbox">
+  <input type="checkbox" class="karthus">
   <span class="checkmark"></span>
 </label>
 </div>
 
 <div class="btext" style="left: 920px; top: 150px; position: absolute;">
-  <div class="heading">Ranger (2)<br><br></div>
+  <div class="ranger">Ranger (2)<br><br></div>
 <label class="container">Varus
   <!--<input type="checkbox" checked="checked">-->
   <input type="checkbox" class="varus">
@@ -227,7 +281,7 @@ text-align: left;
 </div>
 
 <div class="btext" style="left: 100px; top: 450px; position: absolute;">
-  <div class="heading">Phantom (2)<br><br></div>
+  <div class="phantom">Phantom (2)<br><br></div>
 <label class="container">Mordekaiser
   <!--<input type="checkbox" checked="checked">-->
   <input type="checkbox" class="morde">
@@ -240,13 +294,13 @@ text-align: left;
 </label>
 
 <label class="container">Karthus
-  <input type="checkbox">
+  <input type="checkbox" id="parentkarthus">
   <span class="checkmark"></span>
 </label>
 </div>
 
 <div class="btext" style="left: 400px; top: 450px; position: absolute;">
-  <div class="heading">Demons (2)<br><br></div>
+  <div class="demon">Demons (2)<br><br></div>
 
 <label class="container">Morgana
   <input type="checkbox" class="morgana">
@@ -259,7 +313,7 @@ text-align: left;
 </label>
 
 <label class="container">Brand
-  <input type="checkbox">
+  <input type="checkbox" class="brand">
   <span class="checkmark"></span>
 </label>
 </div>
@@ -328,6 +382,209 @@ $(function(){
      $('#parentkindred').prop('checked',$(this).prop('checked'));
   });
 });
+
+$(function(){
+  $('#parentkarthus').on('change',function(){
+     $('.karthus').prop('checked',$(this).prop('checked'));
+  });
+  $('.karthus').on('change',function(){
+     $('#parentkarthus').prop('checked',$(this).prop('checked'));
+  });
+});
+
+$(document).ready(function () {
+    var ckbox = $('#checkbox');
+
+    $('input').on('click',function () {
+        if ($("#parentpoppy:checked,#parentmorde:checked").length == 2) {
+            $('.knight').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+});
+
+    $('input').on('click',function () {
+        if ($("#parentmorde:checked,#parentpoppy:checked").length == 2) {
+            $('.knight').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morde:checked,.poppy:checked").length == 2) {
+            $('.knight').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".poppy:checked,.morde:checked").length == 2) {
+            $('.knight').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".poppy:checked,.veigar:checked,.lulu:checked").length == 3) {
+            $('.yordle').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentpoppy:checked,.veigar:checked,.lulu:checked").length == 3) {
+            $('.yordle').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morgana:checked,.karthus:checked,.lulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorgana:checked,.karthus:checked,.lulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+
+    $('input').on('click',function () {
+        if ($("#parentmorgana:checked,#parentkarthus:checked,.lulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morgana:checked,.veigar:checked,.lulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorgana:checked,.veigar:checked,.lulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorgana:checked,#parentveigar:checked,.lulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morgana:checked,#parentveigar:checked,#parentlulu:checked").length == 3) {
+            $('.sorc').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorgana:checked,#parentvarus:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".varus:checked,.morgana:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morgana:checked,.varus:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorgana:checked,#parentvarus:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentvarus:checked,#parentmorgana:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".brand:checked,#parentmorgana:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".brand:checked,.morgana:checked").length == 2) {
+            $('.demon').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentvarus:checked,#parentkindred:checked").length == 2) {
+            $('.ranger').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".varus:checked,.kindred:checked").length == 2) {
+            $('.ranger').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorde:checked,#parentkindred:checked").length == 2) {
+            $('.phantom').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morde:checked,.kindred:checked").length == 2) {
+            $('.phantom').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentmorde:checked,#parentkarthus:checked").length == 2) {
+            $('.phantom').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($(".morde:checked,.karthus:checked").length == 2) {
+            $('.phantom').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
+
+    $('input').on('click',function () {
+        if ($("#parentkindred:checked,.morde:checked").length == 2) {
+            $('.phantom').css('text-shadow','0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFE36, 0 0 40px #FFFE36, 0 0 50px #FFFE36, 0 0 60px #FFFE36, 0 0 70px #FFFE36');
+        } else {
+        }
+    });
 </script>
 
   
