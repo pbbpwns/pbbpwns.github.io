@@ -717,6 +717,7 @@ button:hover {
 <div class="submenu"><div id="acnl">ACNL</div></div>
 <div class="submenu"><div id="acww">ACWW</div></div>
 <div class="submenu"><div id="accf">ACCF</div></div>
+<div class="submenu"><div id="aclofi">AC LO-FI</div></div>
 <div class="submenu"><div id="study">Study</div></div>
 <div class="submenu"><div id="counter">Stats</div></div>
 </div>
@@ -855,6 +856,11 @@ btn.addEventListener("click", function(){
 <iframe width="450" height="350" src="https://www.youtube.com/embed/9GavnF2SuOc" frameborder="1" allowfullscreen></iframe>
 </div>
 
+<!--AC LO-FI-->
+<div id="aclofi2" class="hidden" style="left: 500px; top: 130px; position: absolute;">
+<iframe width="450" height="350" src="https://www.youtube.com/embed/RzxWRobX2jg" frameborder="1" allowfullscreen></iframe>
+</div>
+												
 <!--Study Music-->
 <div id="study2" class="hidden" style="left: 500px; top: 130px; position: absolute;">
 <iframe id="ytplayer" type="text/html" width="450" height="350" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=0&loop=1" frameborder="1" allowfullscreen></iframe>
@@ -933,6 +939,11 @@ $( "#accf" ).click(function() {
   });
 });
 
+$( "#aclofi").click(function() {
+	$( "#aclofi2").slideToggle( "slow", function() {
+});
+});
+				     
 $( "#study").click(function() {
 	$( "#study2").slideToggle( "slow", function() {
 });
