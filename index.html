@@ -766,10 +766,26 @@ function ShowQuote()
  </script>
 </div>
 
+<button onclick="myFunction()">Click Me</button>
+	
+<div id="playerz">
 <div style="left: 30px; top: 100px; position: absolute; hidden="true">
 <iframe width="0" height="0" src="https://www.youtube.com/embed?listType=playlist&list=PLF9bninS7tyc9nP4o0PoB_I302s22miHs&autoplay=1&loop=1" frameborder="1" allowfullscreen></iframe>
 </div>
 </div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("playerz");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
 
 <script>
 var div = document.querySelector(".fade");
