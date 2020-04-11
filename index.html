@@ -718,8 +718,10 @@ button:hover {
 <div class="submenu"><div id="acww">ACWW</div></div>
 <div class="submenu"><div id="accf">ACCF</div></div>
 <div class="submenu"><div id="aclofi">AC LO-FI</div></div>
+<div class="submenu"><div id="acoustic">Acoustic</div></div>
 <div class="submenu"><div id="study">Study</div></div>
 <div class="submenu"><div id="counter">Stats</div></div>
+<div class="submenu"><div id="rain">Rain</div></div>
 </div>
 </div>
 </div>
@@ -757,6 +759,10 @@ function ShowQuote()
     	'Focus on studying. I know it&#39;s hard, but believe me, it&#39;s going to be worth it.',
     	'To be in the top 1%, you have to be willing to do what the other 99% aren&#39;t.',
     	'The expert in anything was once a beginner.',
+        'The only time to regret the past is tomorrow.',
+	'Willpower is what pushes us when everyone else would have quit.',
+	'Don&#39;t live without dreams, but don&#39;t live within them.',
+	'If you think your dreams are out of reach, get up and go get them.',
     ];
     var Pick = Math.floor(Math.random() * (Quote.length));
     document.write(Quote[Pick]);
@@ -803,10 +809,10 @@ btn.addEventListener("click", function(){
 <embed src="/HAARDVUUR%20FIREPLACE%20FEU%20DE%20FOYER.mp3" width="180" height="90" hidden="true" loop="true" />
 </audio>!-->
 
-<audio src="/rainymood.mp4" autoplay loop>
+<!--<audio src="/rainymood.mp4" autoplay loop>
 <p>If you are reading this, it is because your browser does not support the audio element.     </p>
 <embed src="/rainymood.mp4" width="180" height="90" hidden="true" loop="true" />
-</audio>
+</audio>!-->
 
 
 
@@ -855,10 +861,15 @@ btn.addEventListener("click", function(){
 <div id="accfshow" class="hidden" style="left: 500px; top: 130px; position: absolute;">
 <iframe width="450" height="350" src="https://www.youtube.com/embed/9GavnF2SuOc" frameborder="1" allowfullscreen></iframe>
 </div>
-
+												
 <!--AC LO-FI-->
 <div id="aclofi2" class="hidden" style="left: 500px; top: 130px; position: absolute;">
 <iframe width="450" height="350" src="https://www.youtube.com/embed/RzxWRobX2jg" frameborder="1" allowfullscreen></iframe>
+</div>
+
+<!--Acoustic-->
+<div id="acoustic2" class="hidden" style="left: 500px; top: 130px; position: absolute;">
+<iframe width="450" height="350" src="https://www.youtube.com/embed/DjeXpV-AUzo" frameborder="1" allowfullscreen></iframe>
 </div>
 												
 <!--Study Music-->
@@ -878,6 +889,12 @@ btn.addEventListener("click", function(){
 </div>
 -->
 
+<!--RainyCafe--><!--
+<div id="rain" class="rainblock" style="left: 1300px; top: 10px; position: absolute;">Let<br> It<br> Rain</div>
+<div id="rain2" style="left: 500px; top: 110px; position: absolute; display: none;">
+<iframe width="450" height="380" src="https://rainycafe.com/" title="Rainy Cafe scrolling="no" frameborder="1"></iframe>
+</div>
+-->														 
 	
 <script>
 //Javascript
@@ -943,7 +960,12 @@ $( "#aclofi").click(function() {
 	$( "#aclofi2").slideToggle( "slow", function() {
 });
 });
-				     
+
+$( "#acoustic").click(function() {
+	$( "#acoustic2").slideToggle( "slow", function() {
+});
+});
+					  
 $( "#study").click(function() {
 	$( "#study2").slideToggle( "slow", function() {
 });
