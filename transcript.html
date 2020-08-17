@@ -1,0 +1,36 @@
+<style>
+#result {
+  margin-top: 1em;
+  padding: .5em;
+  background: #eee;
+  white-space: pre;
+}
+</style>
+<html>
+<head>
+<title>Transcript Converter</title>
+<script language = "JavaScript">
+(function() {
+
+  const textbox = document.querySelector('#textbox')
+  const result = document.querySelector('#result')
+  function split() {
+      result.innerText = textbox.value
+        // insert a space before all caps
+        .replace(/([A-Z])/g, ' $1')
+        // uppercase the first character
+        .replace(/^./, (str) => str.toUpperCase())
+    };
+
+  textbox.addEventListener('input', split);
+  split();
+}());
+</script>
+</head>
+<div>
+  Text to split
+  <input id="textbox" value="thisStringIsGood" />
+</div>
+
+<div id="result"></div>
+</html>
