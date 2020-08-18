@@ -3,11 +3,31 @@
 <link rel="shortcut icon" href="http://www.iconj.com/ico/e/g/eg7ibcvsmx.ico" type="image/x-icon" />
 <title>Transcript Converter</title>
     <style>
-        #result {
+
+body {
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#result {
   margin-top: 1em;
   padding: .5em;
   background: #eee;
   white-space: pre;
+  text-align: justify;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+#textbox {
+  margin-top: 1em;
+  padding: .5em;
+  background: #eee;
+  white-space: pre;
+  text-align: justify;
+  display: inline-block;
+  border: 1px solid black;
 }
     </style>
     <script src="/scripts/snippet-javascript-console.min.js?v=1"></script><style type="text/css">.as-console-wrapper { position: fixed; bottom: 0; left: 0; right: 0; max-height: 150px; overflow-y: scroll; overflow-x: hidden; border-top: 1px solid #000; display: none; }
@@ -28,11 +48,12 @@
 </head>
 <body>
     <div>
-  Text to split
-  <input id="textbox" value="thisStringIsGood">
+  Text to split:
+  <input id="textbox" value=" Paste transcript here.">
 </div>
 
-<div id="result">This String Is Good</div>
+Output:
+<div id="result">Paste transcript here.</div>
     <script type="text/javascript">
         (function() {
 
