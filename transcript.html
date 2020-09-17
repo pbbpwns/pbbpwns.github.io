@@ -254,6 +254,7 @@ function createDiv(height, width) {
       result.innerText = textbox.value
 	  .replace(/(\n[0-9][:][0-9][0-9]\n)/g, ' ')
 	  .replace(/[0-9][:][0-9][0-9]\n/g, '')
+	  .replace(/'...',' ')
 	  .replace(/\. /g, '.\n')
     };
 
