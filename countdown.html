@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="http://www.iconj.com/ico/p/m/pm9co9a9br.ico" type="image/x-icon" />
+<title>New Tab</title>
+<style type="text/css">
+
+body {
+	//background-image: url("file://C:/Users/lucar_000/Pictures/apinkwallpaper3.png");
+	//background-image: url("file://C:/Users/lucar_000/Pictures/apinkwallpaper4.png");
+	background-color: black;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+	font-family: Calibri;
+	font-size: 15pt;
+	//display: block;
+   transition: background .25s ease;
+   -moz-transition: background .25s ease;
+   -webkit-transition: background .25s ease;
+
+/* IE10+ */ 
+background-image: -ms-linear-gradient(top, #FFC9F3 0%, #FF059B 100%);
+
+/* Mozilla Firefox */ 
+//background-image: -moz-linear-gradient(top, #FFC9F3 0%, #FF059B 100%);
+
+/* Opera */ 
+//background-image: -o-linear-gradient(top, #FFC9F3 0%, #FF059B 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+//background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFC9F3), color-stop(100, #FF059B));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #FFC9F3 0%, #FF059B 100%);
+
+/* W3C Markup */ 
+//background-image: linear-gradient(to bottom, #FFC9F3 0%, #FF059B 100%);
+}
+
+a:active {
+	color: black;
+	font-family: Calibri;
+	//border: 1px dotted black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	font-family: Calibri;
+	//border: 1px dotted black;
+	text-decoration: none;
+}
+
+a:link {
+	color: black;
+	font-family: Calibri Light;
+	//border: 1px dotted black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	font-family: Calibri Light;
+	//font-size: 105%;
+	text-decoration: none;
+	//opacity: 0;
+}
+
+  .volt {
+    font-family: Century Gothic;
+    font-size: 25pt;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 15px #FF0CD2;
+    height: 80px;
+    width: 150px;
+    background: rgba(0,0,0, 0.1);
+    font-weight: normal;
+    }
+
+  .volt:hover {
+  text-decoration: none;
+  color: #ff00f6;
+  text-shadow: -1px 1px 8px #ffc, 1px -1px 5px #fff;
+  //text-shadow: none;
+  background: rgba(0,0,0, 0.6);
+  -webkit-transition: 500ms linear 0s;
+  -moz-transition: 500ms linear 0s;
+  -o-transition: 500ms linear 0s;
+  transition: 500ms linear 0s;
+  outline: 0 none;
+  }
+
+.bm {
+	border: 1px solid black;
+  opacity: 1.0;
+  position: relative;
+	display: inline-block;
+	//This way, the div will act like a block but will have exactly the width it needs instead of taking the whole parent level width !;
+	background: rgba(255,255,255,0.65);
+	;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}
+
+.bm:hover {
+	border: 1px solid black;
+	display: inline-block;
+	//This way, the div will act like a block but will have exactly the width it needs instead of taking the whole parent level width !;
+	//background-color: #ffffff;
+	//filter: alpha(opacity=50);
+  //opacity: 1.0;
+  background: linear-gradient(#073,#0fa);
+}
+
+.bm:after { 
+content: '';
+//glossy effect;
+position: absolute;
+top: 2px;
+left: 2px;
+width: calc(100% - 4px);
+height: 50%;
+background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.resize {
+	display: inline-block;
+	border: 1px solid black;
+	position: absolute;
+}
+
+.video {
+	border: 1px solid black;
+	background: white;
+}
+
+.svideo { 
+  -webkit-transform: scaleX(2); 
+  -moz-transform: scaleX(2);
+   border: 1px solid black;
+   background: white;
+}
+
+.block {
+  // border-right: 1px solid white;
+  // border-top: 1px solid white;
+  height: 100%;
+  //height: 100vh;
+  width: 1366px;
+  color: white;
+  font-size: 20pt;
+  font-family: Calibri Light;
+  background: rgba(0,0,0, 0.25);
+}
+
+.block1 {
+  // border-right: 1px solid white;
+  // border-top: 1px solid white;
+  z-index: -1;
+  //put behind;
+  height: 100%;
+  //height: 100vh;
+  width: 1366px;
+  color: white;
+  font-size: 20pt;
+  font-family: Calibri Light;
+  background: rgba(0,0,0, 0.1);
+  border-radius: 3.5%;
+  position: absolute;
+}
+
+.block1 {
+   content: '';
+   position: absolute;
+   top: 2px;
+   left: 2px;
+   width: calc(100% - 4px);
+   height: 50%;
+   background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.05));
+   } 
+
+.count-title {
+   display: block;
+   margin-bottom: 15px;
+   font-size: 22px;
+   color: #1a1a1a;
+   text-transform: uppercase;
+   font-weight: bold;
+ }
+
+  .countdown p {
+    font-size: 60px;
+    color: #de4848;
+    font: normal 5.94em/107px $lato;
+    font-family: Arial;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 100px;       /* the same as your div height */
+    float: left;
+    height: 110px;
+    width: 100px;
+    margin-right: 10px;
+    background: rgba(255,255,255,0.65);
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    border-radius: 8px; 
+    @include box-shadow(0 3px 4px 0 rgba(0, 0, 0, .2),inset 2px 4px 0 0 rgba(255, 255, 255, .08));
+    &:last-child {
+      margin-right: 0;
+    }
+}
+
+  .countdown p:after { 
+   content: '';
+   position: absolute;
+   top: 2px;
+   left: 2px;
+   width: calc(100% - 4px);
+   height: 50%;
+   background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+   } 
+
+
+  }
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Floating Hearts Cursor!-->
+<script type="text/javascript">
+// <![CDATA[
+var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
+var minisize=16; // smallest size of hearts in pixels
+var maxisize=28; // biggest size of hearts in pixels
+var hearts=66; // maximum number of hearts on screen
+var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
+
+/*****************************
+*JavaScript Love Heart Cursor*
+*  (c)2013+ mf2fm web-design *
+*   http://www.mf2fm.com/rv  *
+*  DON'T EDIT BELOW THIS BOX *
+*****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var herz=new Array();
+var herzx=new Array();
+var herzy=new Array();
+var herzs=new Array();
+var kiss=false;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(mwah);
+
+function mwah() { if (document.getElementById) {
+  var i, heart;
+  for (i=0; i<hearts; i++) {
+    heart=createDiv("auto", "auto");
+    heart.style.visibility="hidden";
+	heart.style.zIndex=(over_or_under=="over")?"1001":"0";
+    heart.style.color=colours[i%colours.length];
+	heart.style.pointerEvents="none";
+    if (navigator.appName=="Microsoft Internet Explorer") heart.style.filter="alpha(opacity=75)";
+    else heart.style.opacity=0.75;
+    heart.appendChild(document.createTextNode(String.fromCharCode(9829)));
+    document.body.appendChild(heart);
+    herz[i]=heart;
+	herzy[i]=false;
+  }
+  set_scroll();
+  set_width();
+  herzle();
+}}
+
+function herzle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<hearts; c++) if (herzy[c]===false) {
+	  herz[c].firstChild.nodeValue=String.fromCharCode(9829);
+      herz[c].style.left=(herzx[c]=x-minisize/2)+"px";
+      herz[c].style.top=(herzy[c]=y-minisize)+"px";
+      herz[c].style.fontSize=minisize+"px";
+	  herz[c].style.fontWeight='normal';
+      herz[c].style.visibility='visible';
+      herzs[c]=minisize;
+      break;
+    }
+  }
+  for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
+  setTimeout("herzle()", 40);
+}
+
+document.onmousedown=pucker;
+document.onmouseup=function(){clearTimeout(kiss);};
+
+function pucker() {
+  ox=-1;
+  oy=-1;
+  kiss=setTimeout('pucker()', 100);
+}
+
+function blow_me_a_kiss(i) {
+  herzy[i]-=herzs[i]/minisize+i%2;
+  herzx[i]+=(i%5-2)/5;
+  if (herzy[i]<sdown-herzs[i] || herzx[i]<sleft-herzs[i] || herzx[i]>sleft+swide-herzs[i]) {
+    herz[i].style.visibility="hidden";
+    herzy[i]=false;
+  }
+  else if (herzs[i]>minisize+2 && Math.random()<.5/hearts) break_my_heart(i);
+  else {
+    if (Math.random()<maxisize/herzy[i] && herzs[i]<maxisize) herz[i].style.fontSize=(++herzs[i])+"px";
+    herz[i].style.top=herzy[i]+"px";
+    herz[i].style.left=herzx[i]+"px";
+  }
+}
+
+function break_my_heart(i) {
+  var t;
+  herz[i].firstChild.nodeValue=String.fromCharCode(9676);
+  herz[i].style.fontWeight='bold';
+  herzy[i]=false;
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height;
+  div.style.width=width;
+  div.style.overflow="hidden";
+  div.style.backgroundColor="transparent";
+  return (div);
+}
+// ]]>
+</script>
+
+</head>
+<body>
+
+<div class="block" style= "left: 0px; top: 0px; height: 63.3px; width: 1366px; position: absolute">
+</div>
+
+<div style="left: 3px; top: 3px; position: absolute;">
+<div class="bm">
+<a href="http://www.leagueofasia.com/index.php">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.leagueofasia.com/index.php"></img> League of Asia</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="http://champion.gg/">&nbsp<img src="http://www.google.com/s2/favicons?domain=champion.gg"></img> Champion.gg</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="http://fb.com/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.facebook.com"></img> Facebook</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="https://www.facebook.com/Official.Apink2011/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.facebook.com"></img> Apink</a>&nbsp <br>
+</div>
+
+<div class="bm">
+<a href="https://www.twitch.tv/directory/game/League%20of%20Legends">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.twitch.tv/directory/game/League%20of%20Legends"></img> Twitch LoL</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="https://www.reddit.com/r/apink/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.reddit.com/r/apink/"></img> /r/apink</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="https://www.reddit.com/r/leagueoflegends/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.reddit.com/r/apink/"></img> /r/leagueoflegends</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="https://www.reddit.com/r/summonerschool/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.reddit.com/r/apink/"></img> /r/summonerschool</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="https://www.reddit.com/r/kpop/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.reddit.com/r/kpop/"></img> /r/kpop</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="https://www.reddit.com/r/3dshacks/">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.reddit.com/r/3dshacks/"></img> /r/3dshacks</a>&nbsp
+</div>
+
+</div>
+
+<div style="left: 3px; top: 32px; position: absolute;">
+<div class="bm">
+<a href="https://www.serebii.net/index2.shtml">&nbsp<img src="http://www.google.com/s2/favicons?domain=www.serebii.net/"></img> Serebii</a>&nbsp
+</div>
+
+<div class="bm">
+<a href="http://boards.4chan.org/vp/catalog">&nbsp<img src="http://www.google.com/s2/favicons?domain=boards.4chan.org/vp/"></img> /vp/</a>&nbsp
+</div>
+</div>
+
+<div class="block1" style= "left: 400px; top: 170px; height: 300px; width: 535px; position: absolute;">
+</div>
+<!-- Countdown to Apink !-->
+<div style="left: 450px; top: 150px; width: 500px; height: 90px; position: absolute;">
+<div class="countdown">
+  <p class="days">00</p>
+  <p class="hours">00</p>
+  <p class="minutes">00</p>
+  <p class="seconds">00</p>
+</div>
+</div>
+
+<div style="left: 450px; top: 330px; width: 500px; position: absolute;">
+<div class="count-title">
+  <class="timeRefDays" style="left: 25px; top: 0px; position: relative;">days</class="timeRefDays">
+    <class="timeRefHours" style="left: 77px; top: 0px; position: relative;">hours</class="timeRefHours">
+      <class="timeRefMinutes" style="left: 105px; top: 0px; position: relative;">minutes</class="timeRefMinutes">
+        <class="timeRefSeconds" style="left: 125px; top: 0px; position: relative;">seconds</class="timeRefSeconds">
+<div style="left: 200px; position: relative;">to<br></div>
+<span class="volt" style="left: 50px; position: relative;">INVESTMENTS FINALS</span></div>
+</div>
+
+
+<script>
+/*
+* Basic Count Down to Date and Time
+* Author: @mrwigster / trulycode.com
+*/
+(function (e) {
+  e.fn.countdown = function (t, n) {
+  function i() {
+    eventDate = Date.parse(r.date) / 1e3;
+    currentDate = Math.floor(e.now() / 1e3);
+    if (eventDate <= currentDate) {
+      n.call(this);
+      clearInterval(interval)
+    }
+    seconds = eventDate - currentDate;
+    days = Math.floor(seconds / 86400);
+    seconds -= days * 60 * 60 * 24;
+    hours = Math.floor(seconds / 3600);
+    seconds -= hours * 60 * 60;
+    minutes = Math.floor(seconds / 60);
+    seconds -= minutes * 60;
+    days == 1 ? thisEl.find(".timeRefDays").text("day") : thisEl.find(".timeRefDays").text("days");
+    hours == 1 ? thisEl.find(".timeRefHours").text("hour") : thisEl.find(".timeRefHours").text("hours");
+    minutes == 1 ? thisEl.find(".timeRefMinutes").text("minute") : thisEl.find(".timeRefMinutes").text("minutes");
+    seconds == 1 ? thisEl.find(".timeRefSeconds").text("second") : thisEl.find(".timeRefSeconds").text("seconds");
+    if (r["format"] == "on") {
+      days = String(days).length >= 2 ? days : "0" + days;
+      hours = String(hours).length >= 2 ? hours : "0" + hours;
+      minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
+      seconds = String(seconds).length >= 2 ? seconds : "0" + seconds
+    }
+    if (!isNaN(eventDate)) {
+      thisEl.find(".days").text(days);
+      thisEl.find(".hours").text(hours);
+      thisEl.find(".minutes").text(minutes);
+      thisEl.find(".seconds").text(seconds)
+    } else {
+      alert("Invalid date. Example: 30 Tuesday 2013 15:50:00");
+      clearInterval(interval)
+    }
+  }
+  var thisEl = e(this);
+  var r = {
+    date: null,
+    format: null
+  };
+  t && e.extend(r, t);
+  i();
+  interval = setInterval(i, 1e3)
+  }
+  })(jQuery);
+  $(document).ready(function () {
+  function e() {
+    var e = new Date;
+    e.setDate(e.getDate() + 60);
+    dd = e.getDate();
+    mm = e.getMonth() + 1;
+    y = e.getFullYear();
+    futureFormattedDate = mm + "/" + dd + "/" + y;
+    return futureFormattedDate
+  }
+  $(".countdown").countdown({
+    date: "21 November 2020 17:00:00", // Change this to your desired date to countdown to
+    format: "on"
+  });
+});
+</script>
+
+
+</body>
